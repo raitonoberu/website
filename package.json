@@ -10,11 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.5.1",
-    "@fortawesome/free-brands-svg-icons": "^6.5.1",
-    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@iconify-json/uil": "^1.1.8",
     "@picocss/pico": "^2.0.6",
     "astro": "^4.4.5",
+    "astro-icon": "^1.1.0",
     "sass": "^1.72.0"
   }
 }

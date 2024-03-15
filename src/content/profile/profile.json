@@ -8,22 +8,22 @@
         {
             "name": "Email",
             "url": "mailto:raitonoberu@mail.ru",
-            "icon": "fa fa-envelope"
+            "icon": "envelope"
         },
         {
             "name": "GitHub",
             "url": "https://github.com/raitonoberu",
-            "icon": "fa-brands fa-github"
+            "icon": "github"
         },
         {
             "name": "Telegram",
             "url": "https://t.me/raitonoberu",
-            "icon": "fa-brands fa-telegram"
+            "icon": "telegram"
         },
         {
             "name": "VK",
             "url": "https://vk.com/raitonoberu",
-            "icon": "fa-brands fa-vk"
+            "icon": "vk"
         }
     ]
 }

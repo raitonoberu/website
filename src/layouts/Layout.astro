@@ -4,8 +4,6 @@ interface Props {
 }
 
 const { title } = Astro.props;
-
-import "@fortawesome/fontawesome-svg-core/styles.css";
 ---
 
 <!doctype html>
@@ -106,19 +104,3 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
     --pico-h2-color: var(--pico-color);
   }
 </style>
-
-<script>
-  import { library, config, dom } from "@fortawesome/fontawesome-svg-core";
-  import {
-    faGithub,
-    faTelegram,
-    faVk,
-  } from "@fortawesome/free-brands-svg-icons";
-  import { faEnvelope, faLocationDot } from "@fortawesome/free-solid-svg-icons";
-
-  config.autoAddCss = false;
-
-  library.add(faGithub, faTelegram, faVk, faEnvelope, faLocationDot);
-
-  dom.watch();
-</script>

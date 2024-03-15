@@ -5,6 +5,8 @@ import profile from "../content/profile/profile.json";
 import About from "../content/about/about.md";
 const skills = await Astro.glob("../content/skills/*.md");
 const projects = await Astro.glob("../content/projects/*.md");
+
+import { Icon } from "astro-icon/components";
 ---
 
 <Layout title={profile.title}>
@@ -16,7 +18,7 @@ const projects = await Astro.glob("../content/projects/*.md");
           <h1>{profile.name}</h1>
           <p>{profile.specialty}</p>
           <p>
-            <i class="fa fa-location-dot"></i>
+            <Icon name="uil:location-point" />
             {profile.location}
           </p>
         </hgroup>
@@ -24,7 +26,7 @@ const projects = await Astro.glob("../content/projects/*.md");
           {
             profile.links.map((link) => (
               <a href={link.url}>
-                <i class={link.icon} />
+                <Icon name={"uil:" + link.icon} />
                 {link.name}
               </a>
             ))
