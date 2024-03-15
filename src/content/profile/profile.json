@@ -1,0 +1,29 @@
+{
+    "title": "/home/raitonoberu",
+    "name": "Denis Filimonov",
+    "specialty": "Junior Backend Developer",
+    "location": "Yekaterinburg, Russia",
+    "photo": "https://avatars.githubusercontent.com/u/64320078",
+    "links": [
+        {
+            "name": "Email",
+            "url": "mailto:raitonoberu@mail.ru",
+            "icon": "fa fa-envelope"
+        },
+        {
+            "name": "GitHub",
+            "url": "https://github.com/raitonoberu",
+            "icon": "fa-brands fa-github"
+        },
+        {
+            "name": "Telegram",
+            "url": "https://t.me/raitonoberu",
+            "icon": "fa-brands fa-telegram"
+        },
+        {
+            "name": "VK",
+            "url": "https://vk.com/raitonoberu",
+            "icon": "fa-brands fa-vk"
+        }
+    ]
+}

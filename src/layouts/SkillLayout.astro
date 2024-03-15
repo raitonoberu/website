@@ -1,0 +1,20 @@
+---
+import type { MarkdownLayoutProps } from "astro";
+
+type Props = MarkdownLayoutProps<{
+  name: string;
+}>;
+
+const { frontmatter } = Astro.props;
+---
+
+<dt>{frontmatter.name}</dt>
+<dd>
+  <slot />
+</dd>
+
+<style>
+  dt {
+    font-weight: bold;
+  }
+</style>

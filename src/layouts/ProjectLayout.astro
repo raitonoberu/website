@@ -1,0 +1,23 @@
+---
+import type { MarkdownLayoutProps } from "astro";
+
+type Props = MarkdownLayoutProps<{
+  name: string;
+  description: string;
+  link: string;
+}>;
+
+const { frontmatter } = Astro.props;
+---
+
+<article>
+  <hgroup>
+    <h4>
+      <a href={frontmatter.link} target="_blank" rel="noopener noreferrer">
+        {frontmatter.name}
+      </a>
+    </h4>
+    <p>{frontmatter.description}</p>
+  </hgroup>
+  <slot />
+</article>

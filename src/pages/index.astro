@@ -1,0 +1,85 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import profile from "../content/profile/profile.json";
+import About from "../content/about/about.md";
+const skills = await Astro.glob("../content/skills/*.md");
+const projects = await Astro.glob("../content/projects/*.md");
+---
+
+<Layout title={profile.title}>
+  <main class="container">
+    <section id="profile">
+      <img src={profile.photo} />
+      <div>
+        <hgroup>
+          <h1>{profile.name}</h1>
+          <p>{profile.specialty}</p>
+          <p>
+            <i class="fa fa-location-dot"></i>
+            {profile.location}
+          </p>
+        </hgroup>
+        <div class="links">
+          {
+            profile.links.map((link) => (
+              <a href={link.url}>
+                <i class={link.icon} />
+                {link.name}
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <h2>About me</h2>
+
+      <About />
+    </section>
+    <section id="skills">
+      <h2>My skills</h2>
+
+      <dl>
+        {skills.map((skill) => <skill.Content />)}
+      </dl>
+    </section>
+    <section id="projects">
+      <h2>My projects</h2>
+
+      {projects.map((project) => <project.Content />)}
+    </section>
+  </main>
+</Layout>
+
+<style>
+  @media (min-width: 1280px) {
+    main {
+      max-width: 800px;
+    }
+  }
+
+  #profile {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  #profile img {
+    width: 25%;
+    height: 25%;
+    max-width: 10rem;
+    max-height: 10rem;
+    border-radius: 50%;
+  }
+
+  #profile .links {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  h2 {
+    --pico-font-size: 1.5rem;
+    --pico-line-height: 1.175;
+    --pico-typography-spacing-top: 2.25rem;
+  }
+</style>

@@ -1,0 +1,102 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+
+import "@picocss/pico";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="This is my porftolio." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="color-scheme" content="light dark" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style>
+  :root {
+    user-select: none;
+  }
+
+  [data-theme="light"],
+  :root:not([data-theme="dark"]) {
+    --pico-color: #575279;
+    --pico-muted-color: #9893a5;
+    --pico-background-color: #faf4ed;
+    --pico-text-selection-color: rgb(87, 82, 121, 0.25);
+    --pico-primary: #286983;
+    --pico-primary-background: #ea9a97;
+    --pico-primary-underline: rgb(180, 99, 122, 0.5);
+    --pico-primary-hover: #907aa9;
+    --pico-primary-hover-background: #b4637a;
+    --pico-primary-focus: rgb(62, 143, 176, 0.5);
+    --pico-primary-inverse: #fffaf3;
+    --pico-card-background-color: #fffaf3;
+    --pico-h1-color: #d7827e;
+    --pico-h2-color: var(--pico-color);
+  }
+
+  @media only screen and (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+      --pico-color: #e0def4;
+      --pico-muted-color: #6e6a86;
+      --pico-background-color: #191724;
+      --pico-text-selection-color: rgb(110, 106, 134, 0.1875);
+      --pico-primary: #9ccfd8;
+      --pico-primary-background: #31748f;
+      --pico-primary-underline: rgb(234, 154, 151, 0.5);
+      --pico-primary-hover: #c4a7e7;
+      --pico-primary-hover-background: #eb6f92;
+      --pico-primary-focus: rgb(49, 116, 143, 0.375);
+      --pico-primary-inverse: #e0def4;
+      --pico-card-background-color: #1f1d2e;
+      --pico-h1-color: #ebbcba;
+      --pico-h2-color: var(--pico-color);
+    }
+  }
+
+  [data-theme="dark"] {
+    --pico-color: #e0def4;
+    --pico-muted-color: #6e6a86;
+    --pico-background-color: #191724;
+    --pico-text-selection-color: rgb(110, 106, 134, 0.1875);
+    --pico-primary: #9ccfd8;
+    --pico-primary-background: #31748f;
+    --pico-primary-underline: rgb(234, 154, 151, 0.5);
+    --pico-primary-hover: #c4a7e7;
+    --pico-primary-hover-background: #eb6f92;
+    --pico-primary-focus: rgb(49, 116, 143, 0.375);
+    --pico-primary-inverse: #e0def4;
+    --pico-card-background-color: #1f1d2e;
+    --pico-h1-color: #ebbcba;
+    --pico-h2-color: var(--pico-color);
+  }
+</style>
+
+<script>
+  import { library, config, dom } from "@fortawesome/fontawesome-svg-core";
+  import {
+    faGithub,
+    faTelegram,
+    faVk,
+  } from "@fortawesome/free-brands-svg-icons";
+  import { faEnvelope, faLocationDot } from "@fortawesome/free-solid-svg-icons";
+
+  config.autoAddCss = false;
+
+  library.add(faGithub, faTelegram, faVk, faEnvelope, faLocationDot);
+
+  dom.watch();
+</script>
