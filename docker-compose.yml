@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  app:
+    container_name: mywebsite
+    build: .
+    ports:
+      - "${PORT}:80"
+    restart: always
