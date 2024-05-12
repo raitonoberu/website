@@ -3,4 +3,4 @@ layout: ../../layouts/SkillLayout.astro
 name: C#
 ---
 
-It's a language I learned in my first year of university. No projects to showcase (yet?). I like its strong OOP-orientation and great potential to write complex architecture.
+This is a language I learned in my first year of university. I currently use it in my work and feel quite comfortable with it, but I still have a ton of things to explore :)
